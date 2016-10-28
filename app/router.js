@@ -13,3 +13,7 @@ Router.map(function() {
 });
 
 export default Router;
+//
+
+// grupos = GroupList.where(:id => u_id).all
+//ember s --proxy http://7ef12ff6.ngrok.io
