@@ -38,6 +38,10 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
+<<<<<<< .merge_file_4RGBC4
+=======
+    "ember-simple-auth": "1.1.0",
+>>>>>>> .merge_file_rupnHG
     "ember-welcome-page": "^1.0.1",
     "loader.js": "^4.0.1"
   }
