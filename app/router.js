@@ -7,9 +7,14 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.route('createUser', {path: '/newUser'});
-    this.route('home', {path: '/'});
-    this.route('profile', {path: '/profile'});
+  this.route('createUser', {path: '/newUser'});
+  this.route('home', {path: '/'});
+  this.route('profile', {path: '/profile'});
+  this.route('group', {path: '/group'});
 });
 
 export default Router;
+//
+
+// grupos = GroupList.where(:id => u_id).all
+//ember s --proxy http://7ef12ff6.ngrok.io
