@@ -5,7 +5,7 @@
         </div>
 	    <div class="col-md-7">
             <div class="container">
-                <div class="col-md-6">                    
+                <div class="col-md-6">
                     <form class="well" {{action 'editUser' model on='submit'}}>
                         <div class="form-group">
                             <label>
@@ -17,7 +17,7 @@
                             <label>
                                 Apellidos
                             </label>
-                            {{input value=model.lastname type="text" class="form-control"}}
+                            {{input value=model.lastName type="text" class="form-control"}}
                         </div>
                         <div class="form-group">
                             <label>
@@ -30,18 +30,18 @@
                                 Fecha de nacimiento
                             </label>
                             {{date-picker class="form-control" value=model.birthday}}
-                        </div>        
+                        </div>
                         <p class="text-center">
                             <button type="submit" class="btn btn-primary">
                                 Actualizar
-                            </button>                       
+                            </button>
                             <button type="" class="btn btn-danger">
                                 Eliminar Cuenta
                             </button>
                         </p>
-                    </form>                        
+                    </form>
                 </div>
             </div>
-	    </div>    
+	    </div>
 	</div>
 </div>
