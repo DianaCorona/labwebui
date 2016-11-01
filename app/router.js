@@ -11,6 +11,8 @@ Router.map(function() {
   this.route('home', {path: '/'});
   this.route('profile', {path: '/profile'});
   this.route('group', {path: '/group'});
+
+  this.route('login', {path: '/login'});
 });
 
 export default Router;
