@@ -3,58 +3,63 @@
 
 	<div class="row">
 		<div class="col-md-12">
-			
+
 
 			<div class="form-group">
 				<label>Nombre</label>
-				{{input class="form-control"}}
-			</div>
-				
-			<div class="form-group">
-				<label>Apellidos</label>
-				{{input class="form-control"}}
+				{{input class="form-control" value=model.nombre}}
 			</div>
 
 			<div class="form-group">
+				<label>Apellidos</label>
+				{{input class="form-control" value=model.apellido}}
+			</div>
+			{{!-- nombre: DS.attr('string'),
+			apellido: DS.attr('string'),
+			password: DS.attr('string'),
+			email: DS.attr('string'),
+			nickname: DS.attr('string'),
+			password_confirmation: DS.attr('string'), --}}
+			<div class="form-group">
 				<label>Nickname</label>
-				{{input class="form-control"}}
+				{{input class="form-control" value=model.nickname}}
 			</div>
 
 			<div class="form-group">
 				<label>e-mail</label>
-				{{input class="form-control"}}
+				{{input class="form-control" value=model.email}}
 			</div>
 
 			<div class="form-group">
 				<label>Confirma tu e-mail</label>
 				{{input class="form-control"}}
 			</div>
-				
+
 			<div class="form-group">
 				<label>Password</label>
-				{{input class="form-control"}}
+				{{input class="form-control" value=model.password}}
 			</div>
 
 			<div class="form-group">
 				<label>Confirma tu Password</label>
-				{{input class="form-control"}}
+				{{input class="form-control" value=model.password_confirmation}}
 			</div>
 
 			<div class="form-group">
 				<label>Fecha de nacimiento</label>
 				{{date-picker class="form-control"}}
 			</div>
-				
+
 			<div class="form-group">
 				<label>Telefono</label>
 				{{input class="form-control"}}
 			</div>
 
 			<div class="col-md-12 text-center">
-				<button type="submit" class="btn btn-default text-center">Guardar</button>
+				<button type="submit" class="btn btn-default text-center"{{action 'nuevo' model}}>Guardar</button>
 				<button type="submit" class="btn btn-default">Cancelar</button>
 			</div>
-			
+
 		</div>
 	</div>
 </div>
