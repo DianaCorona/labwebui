@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('group', {path: '/group'});
 
   this.route('login', {path: '/login'});
+  
 });
 
 export default Router;
