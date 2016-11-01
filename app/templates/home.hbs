@@ -1,5 +1,13 @@
-<h2>Home</h2>
-
-<p>Peter Parker is Spider-Man</p>
-
-<a href="#" {{action 'logout'}}>Logout</a>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+			<h1>Home</h1>
+			<a href="#" {{action 'logout'}}>Logout</a>
+			<p>
+					{{#link-to 'login' class="btn btn-info btn-block"}}
+						Nueva nota
+					{{/link-to}}
+			</p>
+		</div>
+	</div>
+</div>
