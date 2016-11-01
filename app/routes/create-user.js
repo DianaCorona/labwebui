@@ -7,8 +7,8 @@ export default Ember.Route.extend({
 	actions:{
 		createUser(model){
 			model.save().then(()=>{
-
-			}).cath(()=>{
+				this.transitionTo('login');
+			}).catch(()=>{
 
 			});
 		}
