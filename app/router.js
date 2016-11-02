@@ -13,6 +13,8 @@ Router.map(function() {
   this.route('group', {path: '/group'});
 
   this.route('login', {path: '/login'});
+  this.route('groups');
+  this.route('editGroup');
 });
 
 export default Router;
