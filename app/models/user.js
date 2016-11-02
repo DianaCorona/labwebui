@@ -7,5 +7,6 @@ export default DS.Model.extend({
 	birthday: DS.attr('date'),
 	phone: DS.attr('string'),
 	email: DS.attr('string'),
-    password: DS.attr('string')
+    password: DS.attr('string'),
+
 });

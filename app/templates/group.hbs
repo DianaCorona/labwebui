@@ -2,22 +2,27 @@
     <div class="container">
         <div class="text-center">
             <h1>Crear Grupo</h1>
+
         </div>
 	    <div class="col-md-8">
                 <div class="container">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
 
-                <form {{action 'createGroup' model on= 'submit'}} class="well">
+                <form {{action 'createGroup' model   on= 'submit'}} class="well">
 
                         <div class="form-group">
                             <label>Nombre del Grupo</label>
-                            {{input value=model.name class="form-control"}}
+                            {{input value=model.group.name  class="form-control"}}
                         </div>
 
                             <div class="form-group">
                                 <label>Caducidad</label>
-                              	{{date-picker class="form-control" value=model.exp_date}}
+                              	{{date-picker class="form-control" value=model.group.exp_date}}
+                            </div>
+                            <div class="form-group">
+
+                              
                             </div>
 
                                 <p class="text-center">

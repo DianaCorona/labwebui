@@ -4,6 +4,8 @@ export default Ember.Route.extend({
 	model(){
   		return this.modelFor('application');
   	},
+
+		
   	actions:{
   		editUser(model){
   			model.save().then(()=>{
