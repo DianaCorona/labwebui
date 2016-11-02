@@ -1,6 +1,7 @@
 import Ember from 'ember';
-
-export default Ember.Route.extend({
+import inject from 'ember-service/inject';
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
+export default Ember.Route.extend(AuthenticatedRouteMixin,{
 
   aftermodel(){
     return this.modelFor('application');
