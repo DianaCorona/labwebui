@@ -1,7 +1,7 @@
 <div class="row">
     <div class="container">
         <div class="text-center">
-            <h1>Bienvenid@ {{model.name}}</h1>
+            <h1>Bienvenid@ {{model.nickname}}</h1>
         </div>
 	    <div class="col-md-7">
                 <div class="container">
@@ -12,12 +12,12 @@
 
                             <div class="form-group">
                                 <label>Nombre</label>
-                                {{input value=username class="form-control"}}
+                                {{input value=model.name class="form-control"}}
                             </div>
 
                                 <div class="form-group">
                                     <label>Apellidos</label>
-                                    {{input value=apellidos type="text" class="form-control"}}
+                                    {{input value=model.Last_name type="text" class="form-control"}}
                                 </div>
                                 <div class="form-group">
                                     <label>Correo electronico</label>
@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Fecha de nacimiento</label>
-                                    {{input value=nacimiento type="text" class="form-control"}}
+                                      {{date-picker class="form-control" value=model.birthday}}
                                 </div>
 
                                 <p class="text-center">
@@ -46,10 +46,10 @@
                   <div class="panel-body">Grupos</div>
                 </div>
                  <div class="panel panel-default">
-                  <div class="panel-body">Grupos</div>
+                  <div class="panel-body">Notas</div>
                 </div>
                  <div class="panel panel-default">
-                  <div class="panel-body">Grupos</div>
+                  <div class="panel-body">Calendario</div>
                 </div>
 	    </div>
 	</div>

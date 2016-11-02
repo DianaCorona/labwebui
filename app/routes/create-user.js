@@ -7,6 +7,7 @@ export default Ember.Route.extend({
 	actions:{
 		createUser(model){
 			model.save().then(()=>{
+				alert('Usuario Creado');
 				this.transitionTo('login');
 			}).catch(()=>{
 
