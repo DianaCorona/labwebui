@@ -13,8 +13,17 @@
 
 			</p>
 
+				{{#each model as |item|}}
+
+					<div class="list-group-item">
+						<button {{action 'eliminar' item on='click' bubbles=false}} class="badge btn">X</button>
+						 {{#link-to 'editGroup' item.id class="badge btn"}}E
+						 {{/link-to}}
+						<h4>Nombre: {{item.name}}</h4>
+					</div>
 
 
+					{{/each}}
 		</div>
 	</div>
 </div>

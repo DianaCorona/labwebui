@@ -6,6 +6,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
   aftermodel(){
     return this.modelFor('application');
   },
+  
 
 
     model(){

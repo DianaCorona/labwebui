@@ -12,8 +12,8 @@ Router.map(function() {
   this.route('profile', {path: '/profile'});
   this.route('group', {path: '/group'});
   this.route('login', {path: '/login'});
-  this.route('groups');
-  this.route('editGroup');
+  this.route('groups', {path: '/groups'});
+  this.route('editGroup', {path: '/editGroup/:group_id'});
 });
 
 export default Router;
