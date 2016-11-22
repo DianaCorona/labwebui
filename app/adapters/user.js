@@ -8,6 +8,9 @@ export default RESTAdapter.extend(DataAdapterMixin,{
 		return `/users/create`;
 	}, 
 	urlForUpdateRecord(id){
-		return `/users/${id}/update`
+		return `/users/${id}/update`;
+	}, 
+	urlForDeleteRecord(id){
+		return `/users/${id}/borrar`;
 	}
 });
