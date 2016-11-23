@@ -1,0 +1,11 @@
+<ul>
+  {{#each model as |message|}}
+    <li>{{message.id}} {{message.text}}</li>
+  {{/each}}
+</ul>
+
+
+<form {{action 'sendMessage' on="submit"}}>
+  {{input value=newMessage.text}}
+  <button type="submit" name="button">Enviar</button>
+</form>

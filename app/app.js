@@ -6,6 +6,7 @@ import config from './config/environment';
 let App;
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
+Ember.ENABLE_DS_FILTER = true;
 
 App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,

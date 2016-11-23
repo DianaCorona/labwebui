@@ -14,6 +14,9 @@ Router.map(function() {
   this.route('login', {path: '/login'});
   this.route('groups', {path: '/groups'});
   this.route('editGroup', {path: '/editGroup/:group_id'});
+  this.route('chat', {path: '/chat/:id'}, function() {
+
+  });
 });
 
 export default Router;

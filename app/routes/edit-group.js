@@ -8,7 +8,14 @@ export default Ember.Route.extend({
 let identificador=segmento.group_id
 
 
- return this.store.findRecord('listg', identificador)
+ //return this.store.findRecord('listg', identificador)
+
+ return Ember.RSVP.hash({
+   usuarios: this.store.findAll('user'),
+   grupos: this.store.findRecord('listg', identificador)
+  });
+
+
 
   //  this.router.get('listg').reload().then(function(){
   //    return this.store.findRecord('listg', identificador)
@@ -17,4 +24,5 @@ let identificador=segmento.group_id
 
 
  },
+ 
 });
