@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.TextField.extend({
 	onDidInsertElement: function(){
-		this.$().datetimepicker();
+		this.$().datetimepicker({
+			format: 'YYYY-MM-DD'
+		});
 	}.on('didInsertElement')
 });

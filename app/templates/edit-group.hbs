@@ -17,14 +17,14 @@
 
                             <div class="form-group">
                                 <label>Caducidad</label>
-                                {{input value=model.grupos.expDate type="text" class="form-control"}}
+                                {{date-picker value=model.grupos.expDate type="text" class="form-control"}}
                             </div>
 
                                 <p class="text-center">
-                                    <button type="submit" class="btn btn-primary">Editar</button>
+                                    <button type="submit" class="btn btn-primary" {{action 'editar' model bubbles=false}}>Guardar Cambios</button>
                                     <button type="submit" class="btn btn-primary">Cancelar</button>
                                 </p>
-                                  <p>{{user-list x=model.usuarios}}</p>
+                                  <p>{{user-list x=model.usuarios id_g=model.grupos.id}}</p>
 		            </form>
 
 

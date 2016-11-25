@@ -24,5 +24,13 @@ let identificador=segmento.group_id
 
 
  },
- 
+ actions:{
+   editar(model){
+     model.grupos.save().then(()=>{
+     }).catch(()=>{
+     });
+   },
+
+
+ }
 });
