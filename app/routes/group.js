@@ -6,7 +6,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
   aftermodel(){
     return this.modelFor('application');
   },
-  
+
 
 
     model(){
@@ -20,7 +20,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
 
 	actions:{
 		createGroup(model){
-
+      alert('Grupo Creado');
+      this.transitionTo('groups');
 			model.group.save().then(()=>{
         alert('Us')
 			}).catch(()=>{
