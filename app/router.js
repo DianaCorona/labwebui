@@ -16,7 +16,7 @@ Router.map(function() {
   this.route('editGroup', {path: '/editGroup/:group_id'});
   this.route('chats', {path: '/chats'}, function() {
       this.route('index', {path: '/'});
-      this.route('chat', {path: '/:chat_id'});
+      this.route('chat', {path: '/:id'});
   });
 });
 
