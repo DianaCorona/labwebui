@@ -23,7 +23,7 @@
 	    </div>
 	    <div class="form-group">
 	        <label>Fecha de nacimiento</label>
-	          {{date-picker class="form-control" value=user.birthday}}
+	          {{date-picker value=user.birthday class="form-control" }}
 	    </div>
 	    <p class="text-center">
 	        <button class="btn btn-primary" {{action 'saveUser' user bubbles=false}} >
@@ -56,10 +56,7 @@
 	        <label>Telefono</label>
 	        <input type='text' value={{user.phone}} readonly type="text" class="form-control">
 	    </div>
-	    <div class="form-group">
-	        <label>Fecha de nacimiento</label>
-	          {{date-picker class="form-control" value=user.birthday}}
-	    </div>
+	    
 	    <p class="text-center">
 	        <button class="btn btn-primary" {{action 'enterEditMode'  bubbles=false}} >
 	        	Editar

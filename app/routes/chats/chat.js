@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(){
-    let chat = this.modelFor('chat');
+  model(params){
+    let chat = this.modelFor('chat', params.chat_id);
     return this.store.filter('message', {chat_id: chat.get('id')}, (message)=>{
       return message.get('chat.id') == chat.get('id') && !message.get('isNew');
     });

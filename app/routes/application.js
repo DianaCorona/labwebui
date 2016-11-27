@@ -4,11 +4,9 @@ import service from 'ember-service/inject';
 
 export default Ember.Route.extend(ApplicationRouteMixin, {
   session: service(),
-
-
   model(){
     if (this.get('session.isAuthenticated')){
-      return this.store.findRecord('user', 'me')
+     	return this.store.findRecord('user', 'me');
     } else {
       this.transitionTo('login');
     }
