@@ -2,9 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params){
-    return this.store.filter('message', (message) => {
-      return message.get('chat.id') == params.id && !message.get('isNew');
-    });
+    return this.store.find('chat', params.id)
   },
 
   setupController(c, m){
@@ -17,7 +15,8 @@ export default Ember.Route.extend({
 
   _buildMessage(){
     return this.store.createRecord('message', {
-      chat: this.modelFor('chat')
+      chat: this.modelFor('chats.chat'),
+      user: this.modelFor('application')
     })
   },
 
