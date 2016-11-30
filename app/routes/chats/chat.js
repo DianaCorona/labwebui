@@ -16,7 +16,7 @@ export default Ember.Route.extend({
   _buildMessage(){
     return this.store.createRecord('message', {
       chat: this.modelFor('chats.chat'),
-      user: this.modelFor('application')
+      user2: this.modelFor('application')
     })
   },
 
