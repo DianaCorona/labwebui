@@ -11,10 +11,7 @@ export default RESTAdapter.extend(DataAdapterMixin,{
 	urlForDeleteRecord(id){
 		return `groups/${id}/borrar`;
 	 },
-	 urlForDeleteRecord(idg,idu){
 
-		 return `/group_list/${id_g}/${id_u}`
-	 },
 
    urlForFindRecord(id){
 

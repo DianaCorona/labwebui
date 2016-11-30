@@ -11,8 +11,9 @@ let identificador=segmento.group_id
  //return this.store.findRecord('listg', identificador)
 
  return Ember.RSVP.hash({
-   usuarios: this.store.findAll('user'),
-   grupos: this.store.findRecord('listg', identificador)
+
+   grupos: this.store.findRecord('listg', identificador),
+      usuarios: this.store.findAll('user'),
   });
 
 
