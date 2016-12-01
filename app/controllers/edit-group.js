@@ -21,4 +21,19 @@ export default Ember.Controller.extend({
     });
   }),
 
+	tasksCountLabel: Ember.computed('query', function(){
+		let modelLength = this.get('model.usuarios');
+		let filteredModelLength = this.get('filteredModel.length');
+		let query = this.get('query');
+		debugger;
+		if(!query){ return `${modelLength.get('length')} Usuarios Disponbles`; }
+		else{
+			if( filteredModelLength === 0){
+				return `No Encontrado "${query}"`;
+			}else{
+				return `${filteredModelLength} of ${modelLength.get('length')} Usuarios Disponbles`;
+			}
+		}
+	}),
+
 });
