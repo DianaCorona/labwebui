@@ -24,7 +24,13 @@
                                     <button type="submit" class="btn btn-primary" {{action 'editar' model bubbles=false}}>Guardar Cambios</button>
                                     <button type="submit" class="btn btn-primary">Cancelar</button>
                                 </p>
-                                  <p>{{user-list x=model.usuarios id_g=model.grupos.id}}</p>
+
+                                <p>
+                                  {{input value=query    class="form-control" placeholder="Buscar"}}
+
+                                </p>
+
+                                  <p>{{user-list x=filteredModel  id_g=model.grupos.id}}</p>
 		            </form>
 
 
