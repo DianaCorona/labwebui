@@ -1,0 +1,36 @@
+<div class="col-md-8 col-md-offset-2">
+	<div class="col-md-6" >
+	Chats:
+		<div class="tab-content">
+	                <div class="tab-pane fade in active" id="home">
+	                    <div class="list-group">
+	                    {{#each model as |c|}}
+	                        {{#link-to "chats.chat" c.id class="list-group-item"}}
+		                        <span class="name" style="min-width: 120px;
+		                            display: inline-block;">
+		                            Chat id: {{c.id}}
+		                        </span>
+		                        <span class="">
+		                        	This is big title
+		                        </span>
+		                        <span class="text-muted" style="font-size: 11px;">
+		                        	- Hi hello how r u ?
+		                        </span>
+		                        <span class="badge">
+		                        	12:10 AM
+		                        </span>
+		                        <span class="pull-right">
+		                        </span>
+		                    {{/link-to }}
+
+	                    {{/each}}
+	                    </div>
+	                </div>
+		</div>
+	</div>
+	<div class="col-md-6" >
+	{{outlet}}
+	</div>
+</div>
+
+
