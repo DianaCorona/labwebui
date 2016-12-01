@@ -1,7 +1,3 @@
-import ApplicationSerializer from './application';
+import { ActiveModelSerializer } from 'active-model-adapter';
 
-export default DS.RESTSerializer. extend(DS.EmbeddedRecordsMixin, {
-  attrs: {
-    user: {embedded: 'always'}
-  }
-});
+export default ActiveModelSerializer.extend();
