@@ -8,4 +8,8 @@ export default DS.Model.extend({
 	phone: DS.attr('string'),
 	email: DS.attr('string'),
     password: DS.attr('string'),
+    chat: DS.hasMany('chat'),
+    group: DS.hasMany('group'),
+    message: DS.hasMany('message')
+
 });
