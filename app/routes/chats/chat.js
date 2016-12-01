@@ -8,13 +8,14 @@ export default Ember.Route.extend({
   setupController(c, m){
     this._super(...arguments);
     let chat = this.modelFor('chat');
+    let user = this.modelFor('application');
     c.set('newMessage', this._buildMessage());
+    c.set('user', user);
     // Escuchar al socket
     // socket.on('newMessage', (data)=>{ if(data.chatId == chat.get('id')){ this.store.pushPayload('message', data.message);}})
   },
 
   _buildMessage(){
-
     return this.store.createRecord('message', {
       chat: this.modelFor('chats.chat'),
       user2: this.modelFor('application')
