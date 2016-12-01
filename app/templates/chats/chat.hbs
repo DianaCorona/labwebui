@@ -23,6 +23,21 @@
                 <div class="panel-body">
                     <ul class="chat">
                      {{#each model.messages as |message|}}
+                        {{#if user===message.user2.id}}
+                            <li class="right clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">User id: {{message.user2.id}}</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                                </div>
+                                <p>
+                                    {{message.text}}
+                                </p>
+                            </div>
+                        </li>
+                        {{/if}}
 
                         <li class="right clearfix"><span class="chat-img pull-left">
                             <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
