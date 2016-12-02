@@ -33,9 +33,12 @@ export default Ember.Route.extend({
 
   actions: {
     sendMessage(){
-      let newMessage = this.controller.get('newMessage');
+
+      let newMessage = this.controller.get('message');
+
       newMessage.save().then((message)=>{
         // Enviar mensaje al socket
+        console.log('hola');
          socket.emit('newMessage', { chatId: message.get('chat.id'), message: message.serialize({includeId: true}) })
         this.controller.set('newMessage', this._buildMessage());
       });
