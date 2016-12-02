@@ -24,5 +24,5 @@ let identificador=segmento.group_id
 
 
  },
- 
+
 });

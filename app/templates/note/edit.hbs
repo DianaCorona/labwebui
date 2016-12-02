@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="container">
+        <div class="text-center">
+            <h1>Edita Nueva Nota</h1>
+
+        </div>
+	    <div class="col-md-8">
+                <div class="container">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+
+                <form {{action 'editNote' model idn=model.id   on= 'submit'}} class="well">
+
+                        <div class="form-group">
+                            <label>Título</label>
+                            {{input value=model.title  class="form-control"}}
+                        </div>
+
+												<div class="form-group">
+														<label>Toma una nota...</label>
+														{{input value=model.message  class="form-control"}}
+												</div>
+
+                        <div class="form-group">
+                        	<label>Caducidad</label>
+                          	{{date-picker class="form-control" value=model.exp_date}}
+                        </div>
+
+                        <p class="text-center">
+                        	<button type="submit" class="btn btn-primary">Guardar</button>
+                          {{#link-to 'note.index' class="btn btn-primary"}}
+                						Cancelar
+                					{{/link-to}}
+                        </p>
+		            </form>
+
+        </div>
+              	<div class="col-md-2"></div>
+                </div>
+	    </div>
+
+	</div>
+</div>

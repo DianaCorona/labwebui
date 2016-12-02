@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+
+			<div class="text-center">
+					<h1>Notas de tus grupos</h1>
+			</div>
+
+    {{#each model as |item|}}
+		      <div class="list-group-item">
+		        <button {{action 'deleteNote' item on='click' bubbles=false}} class="badge btn">X</button>
+						{{#link-to 'note.edit' item class="badge btn"}}E
+						{{/link-to}}
+						<h4>{{item.title}}</h4>
+		        <h4>{{item.message}}</h4>
+		      </div>
+    {{/each}}
+		</div>
+	</div>
+</div>

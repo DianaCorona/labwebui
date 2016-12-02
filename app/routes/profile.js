@@ -5,7 +5,7 @@ export default Ember.Route.extend({
   session: inject(),
 	model(){
   		return this.modelFor('application');
-  	},		
+  	},
   	actions:{
   		editUser(model){
   			model.save().then(()=>{
@@ -17,7 +17,7 @@ export default Ember.Route.extend({
       },
       cancelAccount(user) {
         alert('La cuenta se va a eliminar');
-        let promise = user.destroyRecord();        
+        let promise = user.destroyRecord();
         promise.then((response)=>{
           this.get('session').invalidate();
         }).catch(()=>{
