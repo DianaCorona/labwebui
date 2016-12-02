@@ -1,6 +1,7 @@
 import Ember from 'ember';
-
+//let socket;
 export default Ember.Route.extend({
+
   beforeModel(){
     let socket = io('localhost:5000'); //todo funciona sobre la variable global io
     socket.on('connect', ()=>{
@@ -9,8 +10,7 @@ export default Ember.Route.extend({
     this.set('socket',socket); //lo pueda guardar fuera de la ruta
     //debe coincidir con el localhost del app.js
   },
-
-
+  
   model(params){
     return this.store.find('chat', params.id)
   },
@@ -24,6 +24,7 @@ export default Ember.Route.extend({
     c.set('newMessage', this._buildMessage());
     c.set('user', user);
     // Escuchar al socket
+
     socket.on('newMessage', (data)=>{
       debugger;
        if(data.message.chat_id == chat.get('id')){
