@@ -2,7 +2,7 @@
 {{#each x as |item|}}
 
   <div class="list-group-item">
-
+    	<button {{action 'anexar' item.id id_g on='click' bubbles=false}} class="badge btn">Añadir</button>
     <h4>Nombre: {{item.nickname}}</h4>
   </div>
 

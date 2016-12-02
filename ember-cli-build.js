@@ -27,6 +27,7 @@ module.exports = function(defaults) {
   app.import('vendor/js/bootstrap.min.Js');
   app.import('vendor/js/moment.js');
   app.import('vendor/js/bootstrap-datetimepicker.min.js');
+  app.import('vendor/js/socket.io-1.4.5.js');
 
   return app.toTree();
 };

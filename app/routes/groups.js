@@ -10,6 +10,7 @@ actions:{
     let promise = item.destroyRecord();
   //  alert('Grupo eliminado');
     // this.transitionTo('groups');
+  //  debugger;
   window.location.reload(true);
 
   },

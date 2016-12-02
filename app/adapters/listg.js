@@ -12,8 +12,14 @@ export default RESTAdapter.extend(DataAdapterMixin,{
 		return `groups/${id}/borrar`;
 	 },
 
+
    urlForFindRecord(id){
 
      return `/group_list/${id}`;
    },
+
+
+	 urlForUpdateRecord(id, modelName, snapshot){
+		 return `/group_list/${id}`;
+	 }
 });

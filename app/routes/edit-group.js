@@ -4,25 +4,27 @@ export default Ember.Route.extend({
 
   model(segmento){
 
-    //let name= this.modelFor('application').get('email')
 let identificador=segmento.group_id
 
-
- //return this.store.findRecord('listg', identificador)
-
  return Ember.RSVP.hash({
-   usuarios: this.store.findAll('user'),
-   grupos: this.store.findRecord('listg', identificador)
+
+   grupos: this.store.findRecord('listg', identificador),
+      usuarios: this.store.findAll('user'),
   });
 
+ },
+ actions:{
+   editar(model){
+     model.grupos.save().then(()=>{
+     }).catch(()=>{
+     });
+   },
 
 
-  //  this.router.get('listg').reload().then(function(){
-  //    return this.store.findRecord('listg', identificador)
-  //  })
-    //return this.get('store').query('listg',)
-
-
+<<<<<<< HEAD
  },
 
+=======
+ }
+>>>>>>> 066b16d60778a2eaa0278785f723e9d2ad87cb64
 });

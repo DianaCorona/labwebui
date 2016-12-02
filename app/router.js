@@ -14,8 +14,9 @@ Router.map(function() {
   this.route('login', {path: '/login'});
   this.route('groups', {path: '/groups'});
   this.route('editGroup', {path: '/editGroup/:group_id'});
-  this.route('chat', {path: '/chat/:id'}, function() {
-
+  this.route('chats', {path: '/chats'}, function() {
+      this.route('index', {path: '/'});
+      this.route('chat', {path: '/:id'});
   });
   this.route('note', { path: '/notas' }, function() {
     this.route('new', {path: 'new/:group_id'});
