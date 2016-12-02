@@ -18,6 +18,12 @@ Router.map(function() {
       this.route('index', {path: '/'});
       this.route('chat', {path: '/:id'});
   });
+  this.route('note', { path: '/notas' }, function() {
+    this.route('new', {path: 'new/:group_id'});
+    this.route('index', {path: 'index'});
+    this.route('edit', {path: '/editNote/:note_id'});
+  });
+  
 });
 
 export default Router;
