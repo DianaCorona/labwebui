@@ -13,7 +13,8 @@ export default Ember.Route.extend({
   		editNote(model){//debugger
         let id=this.get('idn');
   			model.save(id).then(()=>{
-          alert('Us')
+          alert('Nota Editada Correctamente');
+          this.transitionTo('note.index');
   			}).catch(()=>{
         });
   		}

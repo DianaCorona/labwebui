@@ -21,10 +21,7 @@ let identificador=segmento.group_id
    },
 
 
-<<<<<<< HEAD
- },
 
-=======
  }
->>>>>>> 066b16d60778a2eaa0278785f723e9d2ad87cb64
+
 });

@@ -18,7 +18,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
 	actions:{
 		createNote(model){//debugger
 			model.save().then(()=>{
-        alert('Us')
+        alert('Nota Editada Correctamente');
+        this.transitionTo('note.index');
 			}).catch(()=>{
       });
 		}

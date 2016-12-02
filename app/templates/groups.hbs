@@ -7,7 +7,7 @@
 						Nuevo grupo
 					{{/link-to}}
 
-      
+
 
 			</p>
 
@@ -16,6 +16,8 @@
 					<div class="list-group-item">
 						<button {{action 'eliminar' item on='click' bubbles=false}} class="badge btn">X</button>
 						 {{#link-to 'editGroup' item.id class="badge btn"}}E
+						 {{/link-to}}
+						 {{#link-to 'note.new' item.id class="badge btn"}}N
 						 {{/link-to}}
 						<h4>Nombre: {{item.name}}</h4>
 					</div>
